@@ -11,6 +11,7 @@ const template = Astro.props as EntryProps;
     <p class="text-black dark:text-white">
       <a
         href={template.link}
+        target="_blank"
         class="underline hover:no-underline duration-200 after:content-['_↗']"
       >
         {template.title}
