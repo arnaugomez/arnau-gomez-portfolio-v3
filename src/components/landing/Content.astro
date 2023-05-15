@@ -1,6 +1,8 @@
 ---
-import { details } from "../../data/details.json";
+import { work } from "../../data/work.json";
+import { projects } from "../../data/projects.json";
 import { contact } from "../../data/contact.json";
+import Entry from "./Entry.astro";
 ---
 
 <section>
@@ -11,27 +13,14 @@ import { contact } from "../../data/contact.json";
           <p class="text-black dark:text-white">Work experience</p>
 
           <div class="grid gap-6 mt-3">
-            {
-              details.map((template) => (
-                <>
-                  <div class="text-neutral-500  items-start grid grid-cols-1 md:grid-cols-3">
-                    <div>
-                      <p class="text-neutral-400 dark:text-neutral-400">{template.date}</p>
-                    </div>
-                    <div class="md:col-span-2 w-full">
-                      <p class="text-black dark:text-white">
-                        <a
-                          href={template.link}
-                          class="underline hover:no-underline duration-200 after:content-['_↗']">
-                          {template.title}
-                        </a>
-                      </p>
-                      <p class="">{template.location}</p>
-                    </div>
-                  </div>
-                </>
-              ))
-            }
+            {work.map((item) => <Entry {...item} />)}
+          </div>
+        </div>
+        <div class="text-sm font-light">
+          <p class="text-black dark:text-white">Projects</p>
+
+          <div class="grid gap-6 mt-3">
+            {projects.map((item) => <Entry {...item} />)}
           </div>
         </div>
         <div class="text-sm font-light">
@@ -43,14 +32,17 @@ import { contact } from "../../data/contact.json";
                 <>
                   <div class="text-neutral-500  items-start grid grid-cols-1 md:grid-cols-3">
                     <div>
-                      <p class="text-neutral-400 dark:text-neutral-400">{template.type}</p>
+                      <p class="text-neutral-400 dark:text-neutral-400">
+                        {template.type}
+                      </p>
                     </div>
                     <div class="md:col-span-2 w-full">
                       <p class="text-black dark:text-white">
                         <a
                           href={template.link}
                           title={template.type}
-                          class="underline hover:no-underline duration-200 after:content-['_↗']">
+                          class="underline hover:no-underline duration-200 after:content-['_↗']"
+                        >
                           {template.title}
                         </a>
                       </p>

@@ -2,25 +2,17 @@ export interface Template {
   link: string;
   type: string;
   title: string;
-};
-const one: Template = {
-  link: "mailto:email@example.com",
-  type: "Email",
-  title: "michael@andreuzza.com",
-};
-const two: Template = {
-link: "https://twitter.com/Mike_Andreuzza",
-    type: "Twitter",
-  title: "Mike_Andreuzza",
-};
-const three: Template = {
-link: "https://read.cv/join/michael_andreuzza",
-    type: "Read CV",
-  title: "michael_andreuzza",
-};
-export const bytype = {
-  one,
-    two,
-    three,
-};
-export const contact:Template[] = Object.values(bytype);
+}
+
+export const contact: Template[] = [
+  {
+    link: "https://www.linkedin.com/in/arnau-g%C3%B3mez-903b49187/",
+    type: "LinkedIn",
+    title: "Arnau Gómez",
+  },
+  {
+    link: "https://github.com/arnaugomez",
+    type: "GitHub",
+    title: "Arnau Gómez",
+  },
+];
