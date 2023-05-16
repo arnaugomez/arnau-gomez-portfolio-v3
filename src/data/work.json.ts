@@ -8,7 +8,7 @@ export const work: EntryProps[] = [
     date: "2021 - Present"
   },
   {
-    link: "https://mrmilu.com/",
+    link: "https://www.uab.cat/",
     title: "Junior Researcher and Developer",
     location: "Autonomous University of Barcelona",
     date: "2018 - 2020",
